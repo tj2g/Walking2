@@ -154,8 +154,8 @@ MonoBehaviour:
   PlayerMove: 1
   PlayerLook: 1
   PlayerJump: 1
-  RedEnemySpawner: 1
-  RedEnemyBehaviour: 1
+  RedEnemySpawner: 0
+  RedEnemyBehaviour: 0
 --- !u!114 &1178866414
 MonoBehaviour:
   m_ObjectHideFlags: 0
