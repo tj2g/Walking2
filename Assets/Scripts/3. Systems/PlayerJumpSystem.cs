@@ -31,11 +31,16 @@ public partial struct PlayerSystem : ISystem
         playerComponent = entityManager.GetComponentData<PlayerComponent>(playerEntity);
         inputComponents = entityManager.GetComponentData<InputComponents>(inputEntity);
 
-        foreach (var (physicsVelocity, player) in SystemAPI.Query<RefRW<PhysicsVelocity>, RefRO<PlayerComponent>>())
+        foreach (var (physicsVelocity, player) in SystemAPI.Query<RefRW<PhysicsVelocity>, RefRW<PlayerComponent>>())
         {
-            if (inputComponents.Jumping == 1)
+            if (inputComponents.Jumping == 1 && !playerComponent.IsJumping)
             {
                 physicsVelocity.ValueRW.Linear.y = playerComponent.JumpForce;
+                player.ValueRW.IsJumping = true;
+            }
+            if (physicsVelocity.ValueRO.Linear.y == 0)
+            {
+                player.ValueRW.IsJumping = false;
             }
         }
     }

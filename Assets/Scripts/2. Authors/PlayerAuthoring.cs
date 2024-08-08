@@ -7,6 +7,7 @@ public class PlayerAuthoring : MonoBehaviour
     public float MoveSpeed = 5f;
     public float CameraOffset;
     public float JumpForce;
+    public bool IsJumping;
 
     public class PlayerBaker : Baker<PlayerAuthoring>
     {
@@ -18,6 +19,7 @@ public class PlayerAuthoring : MonoBehaviour
             {
                 MoveSpeed = authoring.MoveSpeed,
                 JumpForce = authoring.JumpForce,
+                IsJumping = authoring.IsJumping,
             });
 
             AddComponent(playerEntity, new CameraOffsetComponent() 

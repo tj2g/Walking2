@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Physics;
@@ -19,7 +20,7 @@ partial struct PlayerMoveSystem : ISystem
         state.RequireForUpdate<PlayerComponent>();
     }
 
-    [BurstCompile]
+    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         entityManager = state.EntityManager;

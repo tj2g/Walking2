@@ -21,7 +21,7 @@ partial struct PlayerLookSystem : ISystem
         state.RequireForUpdate<PlayerComponent>();
     }
 
-    [BurstCompile]
+    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         entityManager = state.EntityManager;

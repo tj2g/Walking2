@@ -104,7 +104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 5
   CameraOffset: 3
-  JumpForce: 1
+  JumpForce: 5
+  IsJumping: 0
 --- !u!114 &-767217314205804332
 MonoBehaviour:
   m_ObjectHideFlags: 0

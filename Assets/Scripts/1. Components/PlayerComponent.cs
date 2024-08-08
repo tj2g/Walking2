@@ -5,4 +5,5 @@ public struct PlayerComponent : IComponentData
 {
     public float MoveSpeed;
     public float JumpForce;
+    public bool IsJumping;
 }

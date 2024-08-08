@@ -1,14 +1,11 @@
-using System.Runtime.InteropServices;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
-using UnityEngine;
 using Random = Unity.Mathematics.Random;
 
 partial struct RedEnemySpawnSystem : ISystem
 {
-
     [BurstCompile]
     public void OnCreate(ref SystemState state)
     {
@@ -16,7 +13,7 @@ partial struct RedEnemySpawnSystem : ISystem
         state.RequireForUpdate<RedEnemySpawner>();
     }
 
-    [BurstCompile]
+    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         EntityCommandBuffer.ParallelWriter ecb = GetEntityCommandBuffer(ref state);
@@ -24,7 +21,7 @@ partial struct RedEnemySpawnSystem : ISystem
         var config = SystemAPI.GetSingleton<ConfigComponents>();
         float3 playerLocation = new float3(0f, 0f, 0f);
         var random = RandomGenerator.GetRandomGenerator();
-        var elapsedTime = SystemAPI.Time.ElapsedTime;
+        var elapsedTime = (double)SystemAPI.Time.ElapsedTime;
 
         foreach (var (transform, player) in SystemAPI.Query<RefRW<LocalTransform>, RefRO<PlayerComponent>>())
         {
