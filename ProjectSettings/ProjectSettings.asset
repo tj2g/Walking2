@@ -655,7 +655,7 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
-    Standalone: UNITY_PHYSICS_CUSTOM
+    Standalone: UNITY_PHYSICS_CUSTOM;ENABLE_COMPUTE_DEFORMATIONS
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

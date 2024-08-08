@@ -170,8 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Size: 5
   GroundPrefab: {fileID: 8771429213714466689, guid: 443fa6013ce07d84f80e0834d6be1e90, type: 3}
-  PlayerPrefab: {fileID: 5868595936073739479, guid: 277525ec85541bc43ac55054935a548d, type: 3}
-  RedEnemyPrefab: {fileID: 4621523523527785100, guid: eb763775d6e15f64e9c8a429e2bdb572, type: 3}
+  PlayerPrefab: {fileID: 4620237042942122899, guid: 13bd842cc34be2545a605f4698fd83fd, type: 3}
+  RedEnemyPrefab: {fileID: 5868595936073739479, guid: 277525ec85541bc43ac55054935a548d, type: 3}
   RedEnemySpawnRate: 0
   RedEnemySpawnFrequency: 0
 --- !u!4 &1178866415
